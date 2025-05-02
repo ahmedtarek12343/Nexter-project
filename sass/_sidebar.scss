@@ -1,0 +1,51 @@
+.sidebar {
+  background-color: $color-primary;
+  grid-column: 1;
+  grid-row: 1 / -1;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 1 / -1;
+    grid-row: 1/2;
+  }
+}
+
+.nav-btn {
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+  height: 2px;
+  width: 3.6rem;
+  margin-top: 4rem;
+  margin-left: 1.5rem;
+  transition: all 0.2s;
+
+  &::before,
+  &::after {
+    background-color: #fff;
+    height: 2px;
+    width: 4.5rem;
+    content: "";
+    display: block;
+    transition: all 0.2s;
+  }
+
+  &::before {
+    transform: translateY(-1.5rem);
+  }
+
+  &::after {
+    transform: translateY(1.5rem);
+  }
+}
+
+.btn-wrap {
+  height: 7rem;
+}
+
+.btn-wrap:hover {
+  .nav-btn {
+    width: 4.5rem;
+  }
+
+  cursor: pointer;
+}
